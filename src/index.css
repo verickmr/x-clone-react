@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root{
+  --twitter-blue: #1da1f2;
+}
+
+body{
+  color: #0f1419;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, textarea, button{
+  font: 400 1rem Roboto,sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+a{
+  color: inherit;
+}
+
+.layout{
+  max-width: 1000px;
+  width: 100%;
+  height:100vh;
+  margin:  0 auto ;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 300px 1fr
+}
+
+aside{
+  padding: 1.5rem 1.25rem ;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+aside button{
+  background: var(--twitter-blue);
+  border-radius: 9999px;
+  padding:1rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size:1.25rem;
+  font-weight: 900;
+  border: 0;
+}
+
+button svg{
+  display:none}
+
+
+aside button:hover{
+  filter: brightness(0.9);
+}
+
+.logo{
+  width: 2rem;
+  height: 2rem;}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.menu-nav a{
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu-nav a.active{
+  color: var(--twitter-blue)
+}
+
+.menu-nav a svg{
+  width: 2rem;
+  height: 2rem;
+}
+
+.content{
+  border-left: 1px solid #ebeef0;
+  border-right: 1px solid #ebeef0;
+}
+
+.header{
+  padding: 1.5rem 1.25rem ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+border-bottom: 1px solid #ebeef0;
+}
+
+.header svg{
+  width:1.5rem;
+  height: 1.5rem;
+  color: var(--twitter-blue)
+
+}
+
+.add-form{
+  padding: 1.5rem 1.25rem ;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.answer-form{
+  padding: 1.5rem 1.25rem ;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid #ebeef0;
+}
+form label{
+  display:flex;
+  gap:0.75rem;
+  align-items: center;
+  flex:1
+}
+
+label img{
+  border-radius: 9999px;
+  width:3rem;
+  height: 3rem;
+
+}
+
+label textarea{
+  flex: 1;
+  border:0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 1.25rem;
+  resize: none;
+}
+
+label textarea:focus{
+  outline:none;
+}
+
+label textarea::placeholder{
+  color:#5b7083
+}
+
+form button{
+  margin-left:auto;
+  background: var(--twitter-blue);
+  color: #fff;
+  border-radius: 9999px;
+  border:0;
+  font-size: 1rem;
+  font-weight:900;
+  padding:0.75rem 1.5rem;
+}
+
+form button:hover{
+  filter: brightness(0.9);
+}
+
+.line{
+  background:#f7f9fa;
+  border-top: 1px solid #ebeef0;
+  border-bottom: 1px solid #ebeef0;
+  height:0.75rem;
+}
+
+
+@media (max-width:780px){
+  .layout{
+    grid-template-columns: 80px 1fr;
+  }
+  .answer-form{
+    font-size:1rem;
+  }
+  aside{  padding:1.5rem 0.75rem ;
+    align-items: center;
+
+  }
+  button svg{
+    display:block}
+  aside span{display: none}
+  button span{display: none}
+}
